@@ -9,11 +9,11 @@ Source0:	http://dl.sourceforge.net/aiksaurus/%{name}-%{version}.tar.gz
 # Source0-md5:	43892e723bdc516516af69b16489f8cf
 Patch0:		%{name}-enable_deprecated.patch
 URL:		http://aiksaurus.sourceforge.net/
-BuildRequires:	automake
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.0.0
-BuildRequires:	libtool >= 2:1.5
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
 Obsoletes:	Aiksaurus
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,7 +34,7 @@ zosta³ do³±czony.
 Summary:	Header files for Aiksaurus
 Summary(pl):	Pliki nag³ówkowe Aiksaurus
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
 Obsoletes:	Aiksaurus-devel
 
@@ -50,7 +50,7 @@ programistów u¿ywaj±cych bibliotek Aiksaurus.
 Summary:	Static Aiksaurus library
 Summary(pl):	Biblioteka statyczna Aiksaurus
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	Aiksaurus-static
 
 %description static
@@ -63,7 +63,7 @@ Biblioteka statyczna Aiksaurus.
 Summary:	GTK+ frontend for Aiksaurus, an English thesaurus
 Summary(pl):	Frontend GTK+ dla Aiksaurusa - angielskojêzycznego s³ownika wyrazów bliskoznacznych
 Group:		Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2 >= 2.0.0
 
 %description gtk
@@ -77,8 +77,8 @@ bliskoznacznych.
 Summary:	Header files for GTK+ frontend for Aiksaurus
 Summary(pl):	Pliki nag³ówkowe frontendu GTK+ dla Aiksaurusa
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
-Requires:	%{name}-gtk = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-gtk = %{version}-%{release}
 Requires:	gtk+2-devel >= 2.0.0
 
 %description gtk-devel
@@ -91,7 +91,7 @@ Pliki nag³ówkowe frontendu GTK+ dla Aiksaurusa.
 Summary:	Static version of GTK+ frontend for Aiksaurus
 Summary(pl):	Statycza wersja frontendu GTK+ dla Aiksaurusa
 Group:		Development/Libraries
-Requires:	%{name}-gtk-devel = %{version}
+Requires:	%{name}-gtk-devel = %{version}-%{release}
 
 %description gtk-static
 Static version of GTK+ frontend for Aiksaurus.
