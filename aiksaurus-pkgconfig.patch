@@ -1,0 +1,22 @@
+diff -aurN aiksaurus-1.2.1.orig/base/aiksaurus-1.0.pc.in aiksaurus-1.2.1/base/aiksaurus-1.0.pc.in
+--- aiksaurus-1.2.1.orig/base/aiksaurus-1.0.pc.in	2003-06-15 12:18:00.000000000 +0200
++++ aiksaurus-1.2.1/base/aiksaurus-1.0.pc.in	2006-03-28 20:48:12.458741832 +0200
+@@ -1,6 +1,6 @@
+ prefix=@prefix@
+ exec_prefix=${prefix}
+-libdir=${exec_prefix}/lib
++libdir=@libdir@
+ includedir=${prefix}/include
+ 
+ Name: Aiksaurus
+diff -aurN aiksaurus-1.2.1.orig/gtk/gaiksaurus-1.0.pc.in aiksaurus-1.2.1/gtk/gaiksaurus-1.0.pc.in
+--- aiksaurus-1.2.1.orig/gtk/gaiksaurus-1.0.pc.in	2003-05-29 11:14:25.000000000 +0200
++++ aiksaurus-1.2.1/gtk/gaiksaurus-1.0.pc.in	2006-03-28 20:48:29.039221216 +0200
+@@ -1,6 +1,6 @@
+ prefix=@prefix@
+ exec_prefix=${prefix}
+-libdir=${exec_prefix}/lib
++libdir=@libdir@
+ includedir=${prefix}/include
+ 
+ Name: AiksaurusGTK
