@@ -2,7 +2,7 @@ Summary:	An English-language thesaurus library
 Summary(pl):	Angielskojêzyczna biblioteka s³ownika wyrazów bliskoznacznych
 Name:		aiksaurus
 Version:	1.2.1
-Release:	3
+Release:	4
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/aiksaurus/%{name}-%{version}.tar.gz
@@ -11,7 +11,7 @@ Patch0:		%{name}-pkgconfig.patch
 URL:		http://aiksaurus.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 1:2.0.0
+BuildRequires:	gtk+2-devel >= 2:2.9.2
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
@@ -79,7 +79,7 @@ Summary(pl):	Pliki nag³ówkowe frontendu GTK+ dla Aiksaurusa
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	%{name}-gtk = %{version}-%{release}
-Requires:	gtk+2-devel >= 2.0.0
+Requires:	gtk+2-devel >= 2:2.9.2
 
 %description gtk-devel
 Header files for GTK+ frontend for Aiksaurus.
