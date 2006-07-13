@@ -11,7 +11,7 @@ Patch0:		%{name}-pkgconfig.patch
 URL:		http://aiksaurus.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2:2.9.2
+BuildRequires:	gtk+2-devel >= 2:2.10.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
@@ -64,7 +64,7 @@ Summary:	GTK+ frontend for Aiksaurus, an English thesaurus
 Summary(pl):	Frontend GTK+ dla Aiksaurusa - angielskojêzycznego s³ownika wyrazów bliskoznacznych
 Group:		Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk+2 >= 2.0.0
+Requires:	gtk+2 >= 2:2.10.0
 
 %description gtk
 GTK+ frontend for Aiksaurus, an English thesaurus.
@@ -79,7 +79,7 @@ Summary(pl):	Pliki nag³ówkowe frontendu GTK+ dla Aiksaurusa
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	%{name}-gtk = %{version}-%{release}
-Requires:	gtk+2-devel >= 2:2.9.2
+Requires:	gtk+2-devel >= 2:2.10.0
 
 %description gtk-devel
 Header files for GTK+ frontend for Aiksaurus.
@@ -108,6 +108,7 @@ Statycza wersja frontendu GTK+ dla Aiksaurusa.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
+LDFLAGS="%{rpmldflags} -Wl,--as-needed"
 %configure \
 	--enable-static
 %{__make}
