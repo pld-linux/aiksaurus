@@ -1,5 +1,5 @@
 Summary:	An English-language thesaurus library
-Summary(pl.UTF-8):   Angielskojęzyczna biblioteka słownika wyrazów bliskoznacznych
+Summary(pl.UTF-8):	Angielskojęzyczna biblioteka słownika wyrazów bliskoznacznych
 Name:		aiksaurus
 Version:	1.2.1
 Release:	5
@@ -32,7 +32,7 @@ został dołączony.
 
 %package devel
 Summary:	Header files for Aiksaurus
-Summary(pl.UTF-8):   Pliki nagłówkowe Aiksaurus
+Summary(pl.UTF-8):	Pliki nagłówkowe Aiksaurus
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -48,7 +48,7 @@ programistów używających bibliotek Aiksaurus.
 
 %package static
 Summary:	Static Aiksaurus library
-Summary(pl.UTF-8):   Biblioteka statyczna Aiksaurus
+Summary(pl.UTF-8):	Biblioteka statyczna Aiksaurus
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	Aiksaurus-static
@@ -61,7 +61,7 @@ Biblioteka statyczna Aiksaurus.
 
 %package gtk
 Summary:	GTK+ frontend for Aiksaurus, an English thesaurus
-Summary(pl.UTF-8):   Frontend GTK+ dla Aiksaurusa - angielskojęzycznego słownika wyrazów bliskoznacznych
+Summary(pl.UTF-8):	Frontend GTK+ dla Aiksaurusa - angielskojęzycznego słownika wyrazów bliskoznacznych
 Group:		Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2 >= 2:2.10.0
@@ -75,7 +75,7 @@ bliskoznacznych.
 
 %package gtk-devel
 Summary:	Header files for GTK+ frontend for Aiksaurus
-Summary(pl.UTF-8):   Pliki nagłówkowe frontendu GTK+ dla Aiksaurusa
+Summary(pl.UTF-8):	Pliki nagłówkowe frontendu GTK+ dla Aiksaurusa
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	%{name}-gtk = %{version}-%{release}
@@ -89,7 +89,7 @@ Pliki nagłówkowe frontendu GTK+ dla Aiksaurusa.
 
 %package gtk-static
 Summary:	Static version of GTK+ frontend for Aiksaurus
-Summary(pl.UTF-8):   Statycza wersja frontendu GTK+ dla Aiksaurusa
+Summary(pl.UTF-8):	Statycza wersja frontendu GTK+ dla Aiksaurusa
 Group:		Development/Libraries
 Requires:	%{name}-gtk-devel = %{version}-%{release}
 
