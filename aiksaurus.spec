@@ -1,5 +1,5 @@
 Summary:	An English-language thesaurus library
-Summary(pl):	AngielskojÍzyczna biblioteka s≥ownika wyrazÛw bliskoznacznych
+Summary(pl.UTF-8):   Angielskojƒôzyczna biblioteka s≈Çownika wyraz√≥w bliskoznacznych
 Name:		aiksaurus
 Version:	1.2.1
 Release:	5
@@ -24,15 +24,15 @@ embedded in word processors, email composers, and other authoring
 software to provide thesaurus capabilities. A basic command line
 thesaurus program is also included.
 
-%description -l pl
-AngielskojÍzyczna biblioteka s≥ownika wyrazÛw bliskoznacznych, ktÛra
-moøe byÊ stosowana w procesorach tekstu, klientach pocztowych i innym
-oprogramowaniu. Prosty program dzia≥aj±cy z linii poleceÒ rÛwnieø
-zosta≥ do≥±czony.
+%description -l pl.UTF-8
+Angielskojƒôzyczna biblioteka s≈Çownika wyraz√≥w bliskoznacznych, kt√≥ra
+mo≈ºe byƒá stosowana w procesorach tekstu, klientach pocztowych i innym
+oprogramowaniu. Prosty program dzia≈ÇajƒÖcy z linii polece≈Ñ r√≥wnie≈º
+zosta≈Ç do≈ÇƒÖczony.
 
 %package devel
 Summary:	Header files for Aiksaurus
-Summary(pl):	Pliki nag≥Ûwkowe Aiksaurus
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe Aiksaurus
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -42,13 +42,13 @@ Obsoletes:	Aiksaurus-devel
 The header files are only needed for development of programs using the
 Aiksaurus.
 
-%description devel -l pl
-W pakiecie tym znajduj± siÍ pliki nag≥Ûwkowe, przeznaczone dla
-programistÛw uøywaj±cych bibliotek Aiksaurus.
+%description devel -l pl.UTF-8
+W pakiecie tym znajdujƒÖ siƒô pliki nag≈Ç√≥wkowe, przeznaczone dla
+programist√≥w u≈ºywajƒÖcych bibliotek Aiksaurus.
 
 %package static
 Summary:	Static Aiksaurus library
-Summary(pl):	Biblioteka statyczna Aiksaurus
+Summary(pl.UTF-8):   Biblioteka statyczna Aiksaurus
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	Aiksaurus-static
@@ -56,12 +56,12 @@ Obsoletes:	Aiksaurus-static
 %description static
 Static Aiksaurus library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna Aiksaurus.
 
 %package gtk
 Summary:	GTK+ frontend for Aiksaurus, an English thesaurus
-Summary(pl):	Frontend GTK+ dla Aiksaurusa - angielskojÍzycznego s≥ownika wyrazÛw bliskoznacznych
+Summary(pl.UTF-8):   Frontend GTK+ dla Aiksaurusa - angielskojƒôzycznego s≈Çownika wyraz√≥w bliskoznacznych
 Group:		Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2 >= 2:2.10.0
@@ -69,13 +69,13 @@ Requires:	gtk+2 >= 2:2.10.0
 %description gtk
 GTK+ frontend for Aiksaurus, an English thesaurus.
 
-%description gtk -l pl
-Frontend GTK+ dla Aiksaurusa - angielskojÍzycznego s≥ownika wyrazÛw
+%description gtk -l pl.UTF-8
+Frontend GTK+ dla Aiksaurusa - angielskojƒôzycznego s≈Çownika wyraz√≥w
 bliskoznacznych.
 
 %package gtk-devel
 Summary:	Header files for GTK+ frontend for Aiksaurus
-Summary(pl):	Pliki nag≥Ûwkowe frontendu GTK+ dla Aiksaurusa
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe frontendu GTK+ dla Aiksaurusa
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	%{name}-gtk = %{version}-%{release}
@@ -84,19 +84,19 @@ Requires:	gtk+2-devel >= 2:2.10.0
 %description gtk-devel
 Header files for GTK+ frontend for Aiksaurus.
 
-%description gtk-devel -l pl
-Pliki nag≥Ûwkowe frontendu GTK+ dla Aiksaurusa.
+%description gtk-devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe frontendu GTK+ dla Aiksaurusa.
 
 %package gtk-static
 Summary:	Static version of GTK+ frontend for Aiksaurus
-Summary(pl):	Statycza wersja frontendu GTK+ dla Aiksaurusa
+Summary(pl.UTF-8):   Statycza wersja frontendu GTK+ dla Aiksaurusa
 Group:		Development/Libraries
 Requires:	%{name}-gtk-devel = %{version}-%{release}
 
 %description gtk-static
 Static version of GTK+ frontend for Aiksaurus.
 
-%description gtk-static -l pl
+%description gtk-static -l pl.UTF-8
 Statycza wersja frontendu GTK+ dla Aiksaurusa.
 
 %prep
