@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# don't build static libraries
+#
 Summary:	An English-language thesaurus library
 Summary(pl.UTF-8):	Angielskojęzyczna biblioteka słownika wyrazów bliskoznacznych
 Name:		aiksaurus
@@ -110,7 +114,7 @@ Statycza wersja frontendu GTK+ dla Aiksaurusa.
 %{__automake}
 LDFLAGS="%{rpmldflags} -Wl,--as-needed"
 %configure \
-	--enable-static
+	%{?with_static_libs:--enable-static}
 %{__make}
 
 %install
@@ -144,9 +148,11 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{_includedir}/Aiksaurus/AiksaurusGTK*.h
 %{_pkgconfigdir}/aiksaurus-*.pc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libAiksaurus.a
+%endif
 
 %files gtk
 %defattr(644,root,root,755)
@@ -160,6 +166,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/Aiksaurus/AiksaurusGTK*.h
 %{_pkgconfigdir}/gaiksaurus-*.pc
 
+%if %{with static_libs}
 %files gtk-static
 %defattr(644,root,root,755)
 %{_libdir}/libAiksaurusGTK.a
+%endif
