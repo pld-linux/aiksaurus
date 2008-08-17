@@ -24,7 +24,7 @@
  #include "Meaning.h"
  #include "DialogMediator.h"
  #include "Exception.h"
-+#include <string.h>
++#include <cstring>
  using namespace std;
  
  namespace AiksaurusGTK_impl
