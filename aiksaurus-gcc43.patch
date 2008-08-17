@@ -1,0 +1,30 @@
+--- aiksaurus-1.2.1/base/aiksaurus.t.cpp~	2003-06-27 03:44:38.000000000 +0200
++++ aiksaurus-1.2.1/base/aiksaurus.t.cpp	2008-08-17 17:19:34.881003620 +0200
+@@ -24,6 +24,7 @@
+ #include "config.h"
+ #include <iostream>
+ #include <string>
++#include <cstdlib>
+ using namespace std;
+ using AiksaurusImpl::AsciiCompare;
+ 
+--- aiksaurus-1.2.1/gtk/src/gtkAiksaur.t.cpp~	2002-01-12 03:02:12.000000000 +0100
++++ aiksaurus-1.2.1/gtk/src/gtkAiksaur.t.cpp	2008-08-17 17:22:54.038274868 +0200
+@@ -23,6 +23,7 @@
+ #include <gtk/gtk.h>
+ #include <iostream>
+ #include <string>
++#include <cstdlib>
+ using namespace std;
+ 
+ int main(int argc, char** argv)
+--- aiksaurus-1.2.1/gtk/src/Display.cpp~	2008-08-17 17:21:51.128072918 +0200
++++ aiksaurus-1.2.1/gtk/src/Display.cpp	2008-08-17 17:22:21.942444661 +0200
+@@ -22,6 +22,7 @@
+ #include "Meaning.h"
+ #include "DialogMediator.h"
+ #include "Exception.h"
++#include <string.h>
+ using namespace std;
+ 
+ namespace AiksaurusGTK_impl
