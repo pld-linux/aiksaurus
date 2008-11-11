@@ -6,7 +6,7 @@ Summary:	An English-language thesaurus library
 Summary(pl.UTF-8):	Angielskojęzyczna biblioteka słownika wyrazów bliskoznacznych
 Name:		aiksaurus
 Version:	1.2.1
-Release:	9
+Release:	10
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/aiksaurus/%{name}-%{version}.tar.gz
