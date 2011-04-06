@@ -6,7 +6,7 @@ Summary:	An English-language thesaurus library
 Summary(pl.UTF-8):	Angielskojęzyczna biblioteka słownika wyrazów bliskoznacznych
 Name:		aiksaurus
 Version:	1.2.1
-Release:	12
+Release:	13
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/aiksaurus/%{name}-%{version}.tar.gz
@@ -127,6 +127,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libAiksaurus.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -147,7 +149,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libAiksaurus.so
-%{_libdir}/libAiksaurus.la
 %{_includedir}/Aiksaurus
 %exclude %{_includedir}/Aiksaurus/AiksaurusGTK*.h
 %{_pkgconfigdir}/aiksaurus-*.pc
