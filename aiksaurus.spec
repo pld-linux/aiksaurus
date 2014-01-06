@@ -6,7 +6,7 @@ Summary:	An English-language thesaurus library
 Summary(pl.UTF-8):	Angielskojęzyczna biblioteka słownika wyrazów bliskoznacznych
 Name:		aiksaurus
 Version:	1.2.1
-Release:	15
+Release:	16
 License:	GPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/aiksaurus/%{name}-%{version}.tar.gz
@@ -14,6 +14,7 @@ Source0:	http://dl.sourceforge.net/aiksaurus/%{name}-%{version}.tar.gz
 Patch0:		%{name}-pkgconfig.patch
 Patch1:		%{name}-configure_fix.patch
 Patch2:		%{name}-gcc43.patch
+Patch3:		format_security.patch
 URL:		http://aiksaurus.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -110,13 +111,14 @@ Statycza wersja frontendu GTK+ dla Aiksaurusa.
 %patch0 -p1
 %patch1 -p0
 %patch2 -p1
+%patch3 -p1
 
 %build
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-LDFLAGS="%{rpmldflags} -Wl,--as-needed"
+#LDFLAGS="%{rpmldflags} -Wl,--as-needed"
 %configure \
 	%{?with_static_libs:--enable-static}
 %{__make}
@@ -144,6 +146,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/aiksaurus
 %attr(755,root,root) %{_bindir}/caiksaurus
 %attr(755,root,root) %{_libdir}/libAiksaurus-*.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libAiksaurus-*.so.?
 %{_datadir}/%{name}
 
 %files devel
@@ -163,6 +166,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gaiksaurus
 %attr(755,root,root) %{_libdir}/libAiksaurusGTK-*.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libAiksaurusGTK-*.so.?
 
 %files gtk-devel
 %defattr(644,root,root,755)
