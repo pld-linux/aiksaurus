@@ -7,16 +7,16 @@ Summary(pl.UTF-8):	Angielskojęzyczna biblioteka słownika wyrazów bliskoznaczn
 Name:		aiksaurus
 Version:	1.2.1
 Release:	17
-License:	GPL
+License:	GPL v2+
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/aiksaurus/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/aiksaurus/%{name}-%{version}.tar.gz
 # Source0-md5:	3eae03b7c49843ccc9262e52846ea6b4
 Patch0:		%{name}-pkgconfig.patch
 Patch1:		%{name}-configure_fix.patch
 Patch2:		%{name}-gcc43.patch
 Patch3:		format_security.patch
 URL:		http://aiksaurus.sourceforge.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2:2.0.0
 BuildRequires:	libstdc++-devel
@@ -145,16 +145,17 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README base/CHANGES
 %attr(755,root,root) %{_bindir}/aiksaurus
 %attr(755,root,root) %{_bindir}/caiksaurus
-%attr(755,root,root) %{_libdir}/libAiksaurus-*.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libAiksaurus-*.so.?
+%attr(755,root,root) %{_libdir}/libAiksaurus-1.2.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libAiksaurus-1.2.so.0
 %{_datadir}/%{name}
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libAiksaurus.so
-%{_includedir}/Aiksaurus
-%exclude %{_includedir}/Aiksaurus/AiksaurusGTK*.h
-%{_pkgconfigdir}/aiksaurus-*.pc
+%dir %{_includedir}/Aiksaurus
+%{_includedir}/Aiksaurus/Aiksaurus.h
+%{_includedir}/Aiksaurus/AiksaurusC.h
+%{_pkgconfigdir}/aiksaurus-1.0.pc
 
 %if %{with static_libs}
 %files static
@@ -165,14 +166,14 @@ rm -rf $RPM_BUILD_ROOT
 %files gtk
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gaiksaurus
-%attr(755,root,root) %{_libdir}/libAiksaurusGTK-*.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libAiksaurusGTK-*.so.?
+%attr(755,root,root) %{_libdir}/libAiksaurusGTK-1.2.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libAiksaurusGTK-1.2.so.0
 
 %files gtk-devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libAiksaurusGTK.so
 %{_includedir}/Aiksaurus/AiksaurusGTK*.h
-%{_pkgconfigdir}/gaiksaurus-*.pc
+%{_pkgconfigdir}/gaiksaurus-1.0.pc
 
 %if %{with static_libs}
 %files gtk-static
